@@ -1,0 +1,9 @@
+<h1>Delete Task:</h1>
+
+<%= link_to "Delete #{@restaurant.name}",
+    restaurant_path(@restaurant),
+    method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+
+<p><%= link_to "Go back to Index", "/index" %></p>
