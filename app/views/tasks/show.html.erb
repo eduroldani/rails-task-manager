@@ -1,9 +1,18 @@
-<h1>Task:</h1>
+<h1>Yaren Task:</h1>
 
 
 <h2><%= @task.title %></h2>
 <p>Details: <%= @task.details %></p>
 <p>Completed: <%= @task.completed %></p>
+<p>ID: <%= @task.id %></p>
 
 
 <p><%= link_to "Go back", "/tasks" %></p>
+
+<p><%= link_to "Delete", task_path(@task), method: :delete, data: {confirm: 'Are you sure?'} %></p>
+
+<!--
+<p><%= link_to "Edit", "#{task_path(@task)}/edit" %></p>
+-->
+
+<p><%= link_to "Edit", edit_path %></p>

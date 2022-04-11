@@ -1,9 +1,15 @@
-<h1>Delete Task:</h1>
+<h1>Edit Task:</h1>
 
-<%= link_to "Delete #{@restaurant.name}",
-    restaurant_path(@restaurant),
-    method: :delete,
-            data: { confirm: "Are you sure?" } %>
+<%= render "form", restaurant: @task %>
 
+<!--
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.submit %>
+<% end %>
+-->
 
-<p><%= link_to "Go back to Index", "/index" %></p>
+<p><%= link_to "Go back to Index", "/tasks" %></p>
